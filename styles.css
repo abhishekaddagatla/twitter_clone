@@ -1,0 +1,274 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #14171a;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left-col {
+    width: 15%;
+    height: 90%;
+    border-radius: 10px;
+    /* background-color: hsl(224, 27%, 27%); */
+    padding: 10px;
+    position: fixed;
+    overflow: hidden;
+    left: 100px;
+}
+
+#center-col {
+    /* background-color: hsl(222, 25%, 55%); */
+    width: 60%;
+    /* height: 200%; */
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+#right-col {
+    width: 15%;
+    height: 90%;
+    /* background-color: hsl(224, 46%, 31%); */
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    overflow: hidden;
+    right: 100px;
+}
+
+/* left side */
+
+.logo img{
+    width: 25%;
+}
+
+.side-navbar {
+    background-color: hsl(209, 88%, 67%);
+    border-radius: 10px;
+    height: 85%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.user-area {
+    width: 100%;
+    height: 15%;
+    border-radius: 10px;
+    background-color: hsl(224, 38%, 54%);
+    margin-bottom: 10px;
+}
+
+/* center column */
+
+.twit {
+    width: 88%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: hsl(229, 75%, 88%);
+    margin-bottom: 10px;    
+    padding: 20px;
+}
+
+.card {
+    width: 95%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.username {
+    font-family: Helvetica;
+    padding: 10px;
+}
+
+.content {
+    font-family: Helvetica;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.phone-nav {
+    width: 100%;
+    height: 10%;
+    background-color: #14171a81;
+    font-family: Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 1px solid #65778683;
+    backdrop-filter: blur(10px);
+}
+
+.phone-nav a {
+    color: white;
+}
+
+#phone-nav2 {
+    width: 100%;
+    height: 10%;
+    background-color: #14171a;
+    padding: 0px;
+}
+
+.timeline {
+    width: 100%;
+    height: 200%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #14171a;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+}
+
+/* #news-bar {
+    width: 100%;
+    height: 10%;
+    background-color: hsl(223, 50%, 25%);
+} */
+
+/* right side */
+
+.search-bar {
+    width: 100%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: hsl(224, 95%, 76%);
+    margin-bottom: 10px;
+}
+
+.news {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: hsl(224, 47%, 63%);
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+    }
+
+    #left-col {
+        display: none;
+    }
+
+    #right-col {
+        display: none;
+    }
+
+    #center-col {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #center-col .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #center-col .logo img {
+        width: 10%;
+    }
+
+    #center-col .twit {
+        display: none;
+    }
+
+    #center-col .phone-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 2.75%;
+        font-size: 15px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+        position: sticky;
+        top: -1px;
+    }
+
+    .tab {
+        text-decoration: none;
+        color: black;
+    }
+
+    .active-tab {
+        border-bottom: 3px solid #4285f4
+    }
+
+    .inactive-tab {
+        border-bottom: 3px solid transparent;
+    }
+
+    .timeline {
+        border-radius: 0px;
+        height: 55%;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    /* #news-bar {
+        display: flex;
+        height: 3%;
+    } */
+
+    #phone-nav2 {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        justify-content: space-around;
+        border-top: 1px solid #2a3136;
+    }
+
+    #phone-nav2 .nav-button {
+        font-size: 30px;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+}
+
+@media (min-width: 500px) {
+    #center-col .logo {
+        display: none;
+    }
+
+    #center-col #news-bar {
+        display: none;
+    }
+
+    #center-col .phone-nav {
+        display: none;
+    }
+
+    #phone-nav2 {
+        display: none;
+    }
+}
